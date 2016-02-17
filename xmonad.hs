@@ -48,7 +48,7 @@ myConfig dzproc = defaultConfig {
             , startupHook = setWMName "LG3D" -- myStartupHook
             , focusFollowsMouse = True
             , clickJustFocuses = True
-            } -- record syntax of data type defaultConfig
+            }
 
 
 --working on it
@@ -73,7 +73,7 @@ addedKeys = [ ("M-<Return>"  , spawn myTerm),
               ("M-m"         , spawn "nylas")
             ]
 
-myManageHook = composeAll [ resource =? "xterm" --> doFloat
+myManageHook = composeAll [ resource =? "xterm" --> doFloat -- janky
                           , resource =? "emacs" --> doShift (myWorkspaces !! 2)
                           , className =? "chromium" --> doShift (myWorkspaces !! 1)
                           , className =? "NetBeans IDE 8.0.2" --> doShift (myWorkspaces !! 3)

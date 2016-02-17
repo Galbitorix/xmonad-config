@@ -1,0 +1,21 @@
+background yes
+out_to_console yes
+out_to_x no
+update_interval 1
+total_run_times 0
+colorZ  95BA9C
+
+TEXT
+^ca(1,/home/frank/.xmonad/scripts/WeatherApplication.sh)^fg(\#307D92)^i(/home/frank/.xmonad/icons/thermometer.xbm) ^fg(\#fefefe)${texeci 3600 /home/frank/bin/WeatherLine.sh}^ca()    \
+^fg(\#307D92)   ^i(/home/frank/.xmonad/icons/cpu.xbm) ^fg(\#fefefe)${cpu}%    \
+^fg(\#307D92)   ^i(/home/frank/.xmonad/icons/mem.xbm) ^fg(\#fefefe)${memperc}%    \
+^fg(\#307D92)   ^i(/home/frank/.xmonad/large_icons/battery.xbm) ^fg(\#fefefe)${battery_percent BAT0}%    \
+^ca(1,/home/frank/.xmonad/scripts/popterm.sh)^fg(\#307D92)   ^i(/home/frank/.xmonad/icons/calendar.xbm) ^fg(\#fefefe)${time %a, %b %d, %Y}    \
+^fg(\#307D92)   ^i(/home/frank/.xmonad/icons/clock.xbm) ^fg(\#fefefe)${time %H:%M:%S} ^ca()    \
+^fg(\#307D92)   ^i(/home/frank/.xmonad/icons/Arch.xbm)^fg(\#fefefe)    \
+
+
+#Ç ${cpu}% \
+#Î ${memperc}% \
+#Â ${battery_percent     BAT0}% \
+#ø ${time %a, %b %d,%y È %H:%M:%S}
